@@ -1,0 +1,31 @@
+{
+  "name": "channel-colors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanup": "rm ./dist/*",
+    "build": "npm run cleanup && parcel build --no-cache src/default.colors.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoyi/channel-colors.git"
+  },
+  "keywords": [
+    "color"
+  ],
+  "author": "ZOYI Corporation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoyi/channel-colors/issues"
+  },
+  "homepage": "https://github.com/zoyi/channel-colors#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "lodash": "^4.17.15",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-build-colors-json": "file:./parcel-packager"
+  },
+  "devDependencies": {}
+}
