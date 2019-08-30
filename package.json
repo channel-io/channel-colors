@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cleanup": "rm ./dist/*",
+    "cleanup": "rm -f ./dist/*",
     "build": "npm run cleanup && parcel build --no-cache src/default.colors.json"
   },
   "repository": {
