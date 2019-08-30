@@ -13,10 +13,11 @@ Needs [NPM](https://www.npmjs.com/): package manager.
 To install it, see [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 ### Commands
-`npm run build`: Cleanup previous outputs and build colors.
+- `npm run build`: Build colors for all supported platforms after cleaning up previous outputs.
+- `npm run test`: Not supported yet.
 
 #### ETC
-`npm run cleanup`: Cleanup previous outputs. Can not be undone.
+- `npm run cleanup`: Cleanup previous outputs. Can not be undone.
 
 ## Outputs
 ```
