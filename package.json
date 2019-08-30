@@ -1,6 +1,6 @@
 {
   "name": "channel-colors",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Colors for Channel.io, builds platform-dependent color resources by single maintenance point.",
   "scripts": {
     "test": "jest --passWithNoTests",
