@@ -1,6 +1,7 @@
 const { Asset } = require('parcel-bundler');
 const _ = require('lodash');
 const { flow, toPairs, map, forEach } = require('lodash/fp');
+const { blend } = require('./utils');
 
 class AndroidXMLAsset extends Asset {
   constructor(name, options) {
@@ -13,11 +14,7 @@ class AndroidXMLAsset extends Asset {
     buffer.push('<resources>');
     flow(
       toPairs,
-      map(([name, value]) => ([
-        _.toLower(_.replace(name, '_', '')),
-        value,
-      ])),
-      map(([name, value]) => `  <color name="${name}">${value}</color>`),
+      map(([name, { hex, opacity }]) => `  <color name="${name}">${blend(hex, opacity)}</color>`),
       forEach(l => buffer.push(l)),
     )(JSON.parse(code));
     buffer.push('</resources>');

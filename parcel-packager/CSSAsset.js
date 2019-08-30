@@ -1,6 +1,7 @@
 const { Asset } = require('parcel-bundler');
 const _ = require('lodash');
-const { flow, toPairs, map, forEach } = require('lodash/fp');
+const { flow, toPairs, groupBy, mapValues, map, reduce, forEach } = require('lodash/fp');
+const { alphaWithoutLeadingZero } = require('./utils');
 
 class CSSAsset extends Asset {
   constructor(name, options) {
@@ -9,19 +10,32 @@ class CSSAsset extends Asset {
   }
 
   parse(code) {
-    const buffer = [];
-    buffer.push(':root {');
+    const _buffer = [];
+    _buffer.push(':root {');
     flow(
       toPairs,
-      map(([name, value]) => ([
-        `  --${_.kebabCase(_.replace(name, '_', ''))}`,
-        value,
-      ])),
-      map(([name, value]) => (`${name}: ${value};`)),
-      forEach(l => buffer.push(l)),
+      mapValues(([name, info]) => ({ name, ...info })),
+      groupBy('family'),
+      toPairs,
+      map(([family, colors]) => {
+        return ([
+          family,
+          _.map(colors, ({ name, rgb, opacity }) => {
+            const styleName = `--${_.kebabCase(name)}`;
+            const styleValue = `rgba(${rgb.split(',').join(', ')}, ${alphaWithoutLeadingZero(opacity)})`;
+            return [styleName, styleValue];
+          }).map(([name, value]) => (`${name}: ${value};`)),
+        ])
+      }),
+      reduce((buffer, [family, colors]) => {
+        buffer.push(`/* ${family} */`);
+        colors.forEach(x => buffer.push(x));
+        return buffer;
+      }, []),
+      forEach(x => _buffer.push(`  ${x}`)),
     )(JSON.parse(code));
-    buffer.push('}');
-    return buffer;
+    _buffer.push('}');
+    return _buffer;
   }
 
   async generate() {
