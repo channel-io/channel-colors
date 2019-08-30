@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Colors for Channel.io, builds platform-dependent color resources by single maintenance point.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests",
     "cleanup": "rm -f ./dist/*",
     "build": "npm run cleanup && parcel build --no-cache src/default.colors.json"
   },
@@ -29,5 +29,7 @@
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-build-colors-json": "file:./parcel-packager"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
