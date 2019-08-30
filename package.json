@@ -27,7 +27,7 @@
     "color-parse": "^1.3.8",
     "lodash": "^4.17.15",
     "parcel-bundler": "^1.12.3",
-    "parcel-plugin-build-colors-json": "file:./parcel-packager"
+    "@channel-io/parcel-plugin-json": "file:./parcel-packager"
   },
   "devDependencies": {
     "jest": "^24.9.0"
