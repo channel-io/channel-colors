@@ -10,6 +10,7 @@ For now, it supports platforms below:
 ## Build
 ### Prerequisite
 Needs [NPM](https://www.npmjs.com/): package manager.
+To install it, see [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 ### Commands
 `npm run build`: Cleanup previous outputs and build colors.
@@ -27,3 +28,6 @@ Needs [NPM](https://www.npmjs.com/): package manager.
     ├── default.colors.scss  # SCSS
     └── default.colors.css  # CSS
 ```
+
+## License
+MIT License.
