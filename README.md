@@ -3,19 +3,54 @@
 # Colors of Channel.io
 Channel-Colors is an color scheme using [Channel.io](https://www.channel.io/).
 
-## Supported Platforms
-- SCSS (https://sass-lang.com/)
-- CSS
-- Resource XML for Android (https://developer.android.com/guide/topics/resources/more-resources)
-- as well as Simple JSON
+Anyone can download pre built scheme(recommended) or build manually with original .colors.json file.
 
-## Download
+## Supported Platforms / Download / Usage
 We provide pre built latest distributions.
 
-- SCSS: [Download](http://cdn.channel.io/colors/default.colors.scss)
-- CSS: [Download](http://cdn.channel.io/colors/default.colors.css)
-- Android XML: [Download](http://cdn.channel.io/colors/android.default.colors.xml)
-- JSON: [Download](http://cdn.channel.io/colors/default.colors.json)
+### SCSS (https://sass-lang.com/)
+[Download Pre Built](http://cdn.channel.io/colors/default.colors.scss)
+Usage
+```scss
+div {
+  background-color: $ch-navy600;
+}
+```
+
+### CSS
+[Download Pre Built](http://cdn.channel.io/colors/default.colors.css)
+
+Usage
+```css
+div {
+  background-color: var(--navy-600);
+}
+```
+
+### Android XML (https://developer.android.com/guide/topics/resources/more-resources)
+[Download Pre Built](http://cdn.channel.io/colors/android.default.colors.xml)
+
+Usage
+```xml
+<TextView
+  android:background="@color/navy600" />
+```
+
+### JSON:
+[Download Pre Built](http://cdn.channel.io/colors/default.colors.json)
+
+Scheme
+```json
+{
+  "navy600": {
+    "hex": "#09124E",
+    "opacity": 100,
+    "rgb": "9,18,78",
+    "family": "navy"
+  },
+  ...
+}
+```
 
 ## Manual Build
 It builds platform-dependent color resources by single maintenance point.
