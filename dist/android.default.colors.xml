@@ -14,6 +14,8 @@
   <color name="white20">#33FFFFFF</color>
   <color name="white15">#26FFFFFF</color>
   <color name="white10">#19FFFFFF</color>
+  <color name="white5">#0CFFFFFF</color>
+  <color name="white">#FFFFFFFF</color>
   <color name="grey900">#FF242428</color>
   <color name="grey700">#FF65676A</color>
   <color name="grey500">#FFA7A7AA</color>
