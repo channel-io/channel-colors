@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="black70">#B2FFFFFF</color>
-  <color name="black50">#7FFFFFFF</color>
-  <color name="black40">#66FFFFFF</color>
-  <color name="black20">#33FFFFFF</color>
-  <color name="black15">#26FFFFFF</color>
-  <color name="black10">#19FFFFFF</color>
-  <color name="black5">#0CFFFFFF</color>
-  <color name="black">#FFFFFFFF</color>
   <color name="white70">#B2000000</color>
   <color name="white50">#7F000000</color>
-  <color name="white30">#4C000000</color>
+  <color name="white30">#66000000</color>
   <color name="white20">#33000000</color>
   <color name="white15">#26000000</color>
   <color name="white10">#19000000</color>
   <color name="white5">#0C000000</color>
   <color name="white">#FF000000</color>
+  <color name="black70">#B2FFFFFF</color>
+  <color name="black50">#7FFFFFFF</color>
+  <color name="black40">#4CFFFFFF</color>
+  <color name="black20">#33FFFFFF</color>
+  <color name="black15">#26FFFFFF</color>
+  <color name="black10">#19FFFFFF</color>
+  <color name="black5">#0CFFFFFF</color>
+  <color name="black">#FFFFFFFF</color>
   <color name="grey100">#FF242428</color>
   <color name="grey200">#FF65676A</color>
   <color name="grey300">#FFA7A7AA</color>
