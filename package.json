@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/zoyi/channel-colors#readme",
   "dependencies": {
-    "autoprefixer": "^9.6.1",
     "color-parse": "^1.3.8",
     "lodash": "^4.17.15",
     "parcel-bundler": "^1.12.3",
