@@ -1,5 +1,10 @@
 [![npm version](https://badge.fury.io/js/channel-colors.svg)](https://badge.fury.io/js/channel-colors)
 
+# Project Status
+This project is **DEPRECATED** and now be a part of _Project Mondrian_.
+
+See [bezier-react](https://github.com/channel-io/bezier-react).
+
 # Colors of Channel.io
 Channel-Colors is an color scheme used and created by [Channel.io](https://www.channel.io/).
 
